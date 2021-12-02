@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="KR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class = "alert-box" id='alert'>
+        <p id="trans">Alert 박스</p>
+    </div>
+
+        <button onclick="알림창사용('none')">닫기</button>
+        <button onclick="알림창사용('block')">열기</button>
+
+    <div class= 'test' id='test'>
+        <p id="testp">기본값</p>
+        <button onclick="닫기()">X</button>
+    </div>
+        <button onclick="변경('block', 'id를입력해주세요')">버튼1</button>
+        <button onclick="변경('block', '비밀번호를입력해주세요')">버튼2</button>
+    <script>
+
+        function 알림창사용(구멍){
+            document.getElementById('alert').style.display = 구멍;
+        }
+        
+        function 변경(구멍1, 구멍2){
+            document.getElementById('test').style.display = 구멍1;
+            document.getElementById('testp').innerHTML = 구멍2;
+        }
+        function 닫기(){
+            document.getElementById('test').style.display = 'none';
+        }
+//조작할 태그가 조작하고 싶은 html 위에 작성하면 못읽음
+//== of null이 뜸(오타도 마찬가지)
+
+//getElementById를 오타내면 함수가 오타입니다라고 나옴
+//==not a function
+     
+    </script>
+
+    </body>
+</html>

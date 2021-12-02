@@ -1,0 +1,13 @@
+.alert-box {
+    display: block;
+    width: 500px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.test {
+    display: none;
+    width: 500px;
+    height: 100px;
+    background-color: purple;
+}
