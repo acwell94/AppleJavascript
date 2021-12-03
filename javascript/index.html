@@ -5,8 +5,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 <body>
-    <div class = "alert-box" id='alert'>
+
+
+    <h4 id="testy">안녕하</h4>
+
+      <div class = "alert-box" id='alert'>
         <p id="trans">Alert 박스</p>
     </div>
 
@@ -15,11 +23,13 @@
 
     <div class= 'test' id='test'>
         <p id="testp">기본값</p>
-        <button onclick="닫기()">X</button>
+        <button id='close'>X</button>
     </div>
         <button onclick="변경('block', 'id를입력해주세요')">버튼1</button>
         <button onclick="변경('block', '비밀번호를입력해주세요')">버튼2</button>
     <script>
+        // $('#testy').addClass('yellow-bg');
+        $('#testy').attr('class', 'yellow-bg')
 
         function 알림창사용(구멍){
             document.getElementById('alert').style.display = 구멍;
@@ -29,9 +39,9 @@
             document.getElementById('test').style.display = 구멍1;
             document.getElementById('testp').innerHTML = 구멍2;
         }
-        function 닫기(){
+        document.getElementById('close').addEventListener('click', function(){
             document.getElementById('test').style.display = 'none';
-        }
+        })
 //조작할 태그가 조작하고 싶은 html 위에 작성하면 못읽음
 //== of null이 뜸(오타도 마찬가지)
 
@@ -39,6 +49,9 @@
 //==not a function
      
     </script>
+
+
+
 
     </body>
 </html>
