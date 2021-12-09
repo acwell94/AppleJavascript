@@ -16,3 +16,39 @@
     background: yellow;
     
 }
+
+
+.jumbotron-main{
+    background-image: url(chair.jpg);
+    background-size: cover;
+    color: red;
+    border-radius: 0px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+#black-background {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.white-background {
+    background: white;
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nav-sub {
+    display: none;
+}
