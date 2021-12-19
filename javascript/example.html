@@ -1,0 +1,78 @@
+<!-- 369게임 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="/sub.css" rel='stylesheet'>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1>아무거나</h1>
+    <div>
+    <input id='input' type="text">
+    <p id="in">입력해주세요</p>
+    </div>
+    <script>
+
+        $('#input').on('change',function(){
+            $('#in').show();
+        })
+
+        // $('#input').on('input',function(){
+        //     $('#in').show();
+        // })
+
+        function 삼육구게임(i){
+            if(i % 3 == 1 || i % 3 == 2){
+                console.log('통과')
+            } else { console.log('박수')}
+        }
+        
+
+        function 삼육구게임2(i){
+            
+            if(i % 3 == 0 && i % 9 == 0){
+                console.log('박수x2')
+            } else if(i % 3 == 0){
+                console.log('박수')
+            } else{console.log('통과')}
+        }
+
+ 
+
+        function 오리지널삼육구(i){
+            let 삼육구변수 = i % 10 == 3 || i % 10 == 6 || i % 10 == 9
+            if(i>=30 && 삼육구변수){
+             console.log('박수2')
+            } else if(i>=30 && !삼육구변수){
+                console.log('박수')
+            }
+            else if(삼육구변수){
+             console.log('박수')
+            } else{console.log('통과')}
+        }
+
+        //최대양 계산
+
+        // 처음커피양의 2/3 만큼 리필해준다
+        // 첫커피양이 n이라면 최대 마실 수 있는 커피의 양은?
+
+        var 첫커피양 = 360;
+        var 리필커피 = (첫커피양 / 3)*2
+        
+        var 마신커피 = 0;
+
+        var 마신커피 = 첫커피양 + 리필커피
+
+
+    </script>
+
+
+</body>
+</html>
