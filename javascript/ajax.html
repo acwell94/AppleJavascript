@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <h4 id = 'hello'>임시글씨</h4>
+    <button id="hi">버튼</button>
+    <!-- 
+        서버 : 접속자가 요청을 하면 데이터를 갖다줌
+        요청 : GET / POST 요청
+        GET : URL을 입력해서 요청함(읽기)
+        POST : 아이디, 비밀번호 등 숨겨서 뭔가 정보를 전달하거나 요청함(쓰기)
+        AJAX : 서버에다가 GET/POST 요청을 할 수 있게 도와주는데
+        새로고침없이 요청할 수 있음 == 이것을 하려고 사용함
+    -->
+
+    <script>
+        $.ajax({
+            url : 'https://codingapple1.github.io/hello.txt',
+            type : 'GET'
+        }).done(function(데이터){
+            // hi라는 버튼을 누르면
+            // url에서 데이터를 받아와서
+            // hello의 글씨를 변경해주세요.
+            $('#hi').click(function(){
+                $('#hello').html(데이터)
+            })
+        })
+        // https://codingapple1.github.io/hello.txt에 GET요청하는 코드
+    </script>
+
+</body>
+</html>
