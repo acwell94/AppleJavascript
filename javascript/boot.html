@@ -15,6 +15,9 @@
     crossorigin="anonymous">
     </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <title>Hello, world!</title>
   </head>
   <body>
@@ -165,6 +168,27 @@
       </div>
 
       <script>
+
+        var 이미지1 = document.querySelectorAll('.slide-box img')[0]
+
+        var 매니저 = new Hammer.Manager(이미지1);
+        //암기
+        매니저.add(new Hammer.Pan({ threshold: 0}));
+        //Pan = 슬라이드 threshold = 이벤트 작동 한계점
+
+        매니저.on('pan', function(e){
+          console.log(e.deltaX)
+          // 만약에 왼쪽으로 그림을 슬라이드 했을 때...
+          if(e.deltaX < -1 ){
+            $('.slide-container').css('transform', 'translateX('+ e.deltaX +'px)')
+            
+          }
+        });
+        
+
+
+
+
 
         let 지금보이는사진 = 1;
 
