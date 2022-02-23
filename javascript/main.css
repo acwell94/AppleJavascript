@@ -95,6 +95,9 @@
     /* transition: transform 1s; */
    
 }
+.transforming {
+    transition: transform 1s;
+}
 
 .slide-box{
     width: 100vw;
